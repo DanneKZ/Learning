@@ -1,0 +1,79 @@
+/* الخلفية العامة للموقع */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0b0b0b; /* أسود عميق جداً */
+}
+
+/* صندوق الآلة الحاسبة - صغير وأنيق */
+#calculator {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000000;
+    border-radius: 25px; 
+    width: 300px;        /* حجم صغير ومحكم */
+    overflow: hidden;
+    padding: 15px;
+    border: 1px solid #330000; /* إطار أحمر خفيف جداً */
+    box-shadow: 0px 10px 30px rgba(255, 0, 0, 0.1); /* توهج أحمر خفيف */
+}
+
+/* الشاشة */
+#display {
+    width: 100%;
+    padding: 25px 10px;
+    font-size: 2.5rem;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    color: #ff0000;      /* أرقام حمراء زاهية على خلفية سوداء */
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* شبكة الأزرار */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+/* الأزرار الأساسية (الأرقام) */
+button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #1a1a1a; /* أسود فاتح قليلاً للأزرار */
+    color: white;          
+    font-size: 1.4rem;   
+    font-weight: bold;     
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* أزرار العمليات (حمراء بالكامل) */
+.operator-btn {
+    background-color: #cc0000; /* أحمر "دموي" قوي */
+    color: white;
+}
+
+/* تأثير عند مرور الماوس */
+button:hover {
+    filter: brightness(1.3); /* تفتيح اللون عند التمرير */
+}
+
+/* تأثير الضغط (طريقة CJ) */
+button:active {
+    transform: scale(0.9); /* حركة الضغط الحقيقية */
+    background-color: #ff0000; /* يتحول للأحمر الساطع عند الضغط */
+}
+
+/* زر المسح C - لونه مختلف لتمييزه */
+button[onclick="clearDisplay()"] {
+    background-color: #333333;
+    color: #ff0000;
+}
