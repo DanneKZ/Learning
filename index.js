@@ -11,7 +11,9 @@ function clearDisplay(){
 }
 
 function backspace(){
-    alert("الزر يعمل!"); 
+    // نحول القيمة إلى نص أولاً ثم نقص حرفاً واحداً
+    let currentDisplay = display.value.toString();
+    display.value = currentDisplay.slice(0, -1);
 }
 
 function calculate(){
