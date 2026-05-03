@@ -11,7 +11,7 @@ function clearDisplay(){
 }
 
 function backspace(){
-    display.value = display.value.slice(0,-1);
+    alert("الزر يعمل!"); 
 }
 
 function calculate(){
